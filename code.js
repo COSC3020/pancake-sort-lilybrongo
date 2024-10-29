@@ -1,37 +1,31 @@
-
-function flip(array, n) 
-{
-  let swap = array.slice(0, n);
-  let other = array.slice(n, array.length);
-  swap.reverse();
-  array = swap.concat(other);
-  return array;
-}
-
-function findMax(array, size) 
-{
-  let max = 0;
-  for (let i = 0; i < size; i++) 
-  {
-    if (array[i] > array[max]) 
-    {
-      max = i;
+// Swap elements "flip"
+function flip(array, n) {
+    let first = 0;
+    let last = n - 1;
+    while (first < last) {
+        [array[first], array[last]] = [array[last], array[first]]; 
+        last--;
     }
-  }
-  return max;
 }
-
-// Use only flip() here to manipulate the array
-function pancakeSort(array) 
-{
-  for (let i = array.length; i > 0; i--) 
-  {
-    let max = findMax(array, i);
-    if (max != i - 1) 
-    {
-      array = flip(array, max + 1);
-      array = flip(array, i);
+// *Use only flip() here to manipulate the array*
+function pancakeSort(array) {
+    for (let size = array.length; size > 1; size--) {
+        let maxIndex = 0;
+        // Find the index of the largest element
+        for (let i = 1; i < size; i++) {
+            if (array[i] > array[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+        // Bringing the largest element to the top
+        if (maxIndex !== size - 1) {
+            // Flip it to the top
+            if (maxIndex > 0) {
+                flip(array, maxIndex + 1);
+            }
+          // Then flip it to its correct position
+            flip(array, size);
+        }
     }
-  }
-  return array;
+    return array;
 }
