@@ -4,7 +4,7 @@ function flip(array, n)
   let swap = array.slice(0, n);
   let other = array.slice(n, array.length);
   swap.reverse();
-  arr = swap.concat(other);
+  array = swap.concat(other);
   return array;
 }
 
@@ -13,7 +13,7 @@ function findMax(array, size)
   let max = 0;
   for (let i = 0; i < size; i++) 
   {
-    if (array[i] > arr[max]) 
+    if (array[i] > array[max]) 
     {
       max = i;
     }
