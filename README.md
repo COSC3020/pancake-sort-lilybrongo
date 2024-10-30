@@ -29,7 +29,7 @@ What is the asymptotic runtime ($\Theta$) of your algorithm in terms of the
 number of comparisons? What is it in terms of the number of flips? Add your
 answer to this markdown file.
 
-The asymptotic runtime analysis for the number of comparisons 
+The asymptotic runtime analysis for the number of comparisons would be $\Theta(n^2)$. One of the loops is used to find the max index over an unsorted portion of the array, the other loop is used to itterate over the entire array. This allows the max values to be placed at the end of each array. Since the max index loop is inside the loop that iterates over each element, this is a nested loop with makes it $\Theta(n^2)$. This is how I came to the conclusion that the number of comparisons had an asymptotic runtime analysis of $\Theta(n^2)$. For the number of flips, I came to the conclusion that the asymptotic runtime analysis would be $\Theta(n)$. During the iterations, each element will have at most 2 flips. One flip will take the max index and get it into the first element position, and then the second flip will flip the section of the array so that the max index is at the end. The two flips gives us 2n, in these cases we can drop the constants allowing us to have an asymptotic runtime of $\Theta(n)$. 
 
 Refferenced geeks for geeks pancake sort https://www.geeksforgeeks.org/pancake-sorting/ as well as talked to fellow students daniel collins and will greiner. 
 
