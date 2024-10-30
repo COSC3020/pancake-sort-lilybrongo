@@ -4,6 +4,7 @@ function flip(array, n) {
     let last = n - 1;
     while (first < last) {
         [array[first], array[last]] = [array[last], array[first]]; 
+        first++;
         last--;
     }
 }
