@@ -29,3 +29,15 @@ What is the asymptotic runtime ($\Theta$) of your algorithm in terms of the
 number of comparisons? What is it in terms of the number of flips? Add your
 answer to this markdown file.
 
+The asymptotic runtime analysis for the number of comparisons 
+
+Refferenced geeks for geeks pancake sort https://www.geeksforgeeks.org/pancake-sorting/ as well as talked to fellow students daniel collins and will greiner. 
+
+I certify that I have listed all sources used to complete this exercise, including the use
+of any Large Language Models. All of the work is my own, except where stated
+otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is
+suspected, charges may be filed against me without prior notice.
+
+
+
+
